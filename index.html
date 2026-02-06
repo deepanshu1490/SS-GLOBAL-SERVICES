@@ -5,125 +5,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-    <div class="bg-linear-to-r from-cyan-500 to-blue-500">
-        <header class="absolute inset-x-0 top-0 z-50">
-            <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
-                <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Your Company</span>
-                        <img src="https://www.ssglobalservices.in/images/logo.webp" alt="" class="h-20 w-auto" />
-                    </a>
-                </div>
-                <div class="flex lg:hidden">
-                    <button type="button" command="show-modal" commandfor="mobile-menu"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
-                        <span class="sr-only">Open main menu</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
-                            aria-hidden="true" class="size-6">
-                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm/6 font-semibold text-white">Home</a>
-                    <a href="#" class="text-sm/6 font-semibold text-white">About</a>
-                    <a href="#" class="text-sm/6 font-semibold text-white">Latest Notification</a>
-                    <a href="#" class="text-sm/6 font-semibold text-white">Contact Us</a>
-                </div>
-                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm/6 font-semibold text-white">Log in <span
-                            aria-hidden="true">&rarr;</span></a>
-                </div>
-            </nav>
-            <el-dialog>
-                <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-                    <div tabindex="0" class="fixed inset-0 focus:outline-none">
-                        <el-dialog-panel
-                            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-                            <div class="flex items-center justify-between">
-                                <a href="#" class="-m-1.5 p-1.5">
-                                    <span class="sr-only">Your Company</span>
-                                    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                                        alt="" class="h-8 w-auto" />
-                                </a>
-                                <button type="button" command="close" commandfor="mobile-menu"
-                                    class="-m-2.5 rounded-md p-2.5 text-gray-200">
-                                    <span class="sr-only">Close menu</span>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                        data-slot="icon" aria-hidden="true" class="size-6">
-                                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="mt-6 flow-root">
-                                <div class="-my-6 divide-y divide-white/10">
-                                    <div class="space-y-2 py-6">
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Product</a>
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
-                                    </div>
-                                    <div class="py-6">
-                                        <a href="#"
-                                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log
-                                            in</a>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+      -->
+    <div class="header">
+        <div class="bg-linear-to-r">
+            <header class="absolute inset-x-0 top-0 z-50">
+                <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+                    <div class="flex lg:flex-1">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <span class="sr-only">Your Company</span>
+                            <img src="https://www.ssglobalservices.in/images/logo.webp" alt="" class="h-20 w-auto" />
+                        </a>
+                    </div>
+                    <div class="flex lg:hidden">
+                        <button type="button" command="show-modal" commandfor="mobile-menu"
+                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+                            <span class="sr-only">Open main menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex lg:gap-x-12">
+                        <a href="#" class="text-sm/6 font-semibold text-white">Home</a>
+                        <a href="#" class="text-sm/6 font-semibold text-white">About</a>
+                        <a href="#" class="text-sm/6 font-semibold text-white">Latest Notification</a>
+                        <a href="#" class="text-sm/6 font-semibold text-white">Contact Us</a>
+                    </div>
+                    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                        <a href="#" class="text-sm/6 font-semibold text-white">Log in <span
+                                aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </nav>
+                <el-dialog>
+                    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                            <el-dialog-panel
+                                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                                <div class="flex items-center justify-between">
+                                    <a href="#" class="-m-1.5 p-1.5">
+                                        <span class="sr-only">Your Company</span>
+                                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                                            alt="" class="h-8 w-auto" />
+                                    </a>
+                                    <button type="button" command="close" commandfor="mobile-menu"
+                                        class="-m-2.5 rounded-md p-2.5 text-gray-200">
+                                        <span class="sr-only">Close menu</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            data-slot="icon" aria-hidden="true" class="size-6">
+                                            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="mt-6 flow-root">
+                                    <div class="-my-6 divide-y divide-white/10">
+                                        <div class="space-y-2 py-6">
+                                            <a href="#"
+                                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Product</a>
+                                            <a href="#"
+                                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
+                                            <a href="#"
+                                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
+                                            <a href="#"
+                                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
+                                        </div>
+                                        <div class="py-6">
+                                            <a href="#"
+                                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log
+                                                in</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </el-dialog-panel>
-                    </div>
-                </dialog>
-            </el-dialog>
-        </header>
+                            </el-dialog-panel>
+                        </div>
+                    </dialog>
+                </el-dialog>
+            </header>
 
-        <div class="relative isolate px-6 pt-14 lg:px-8">
-            <div aria-hidden="true"
-                class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-                <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-                    class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
-                </div>
-            </div>
-            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                    <div
-                        class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-                        Offer a complete range of certification and compliance. <a href="#"
-                            class="font-semibold text-indigo-400"><span aria-hidden="true"
-                                class="absolute inset-0"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div aria-hidden="true"
+                    class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+                    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
                     </div>
                 </div>
-                <div class="text-center">
-                    <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Leading
-                        Compliance & Certification Consultants</h1>
-                    <p class="mt-8 text-lg text-sm text-pretty text-gray-400 text-lg">SS Global Services is a trusted
-                        name with over 12+ years of experience in BIS Certification, EPR Registration, WPC ETA Approval,
-                        BEE Registration, and TEC/MTCTE Compliance. We provide fast, reliable, complete certification
-                        solutions to both Indian and foreign manufacturers and importers, ensuring cost-effective and
-                        easy regulatory approvals.</p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="#"
-                            class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Get
-                            started</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white">Learn more <span
-                                aria-hidden="true">→</span></a>
+                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                        <div
+                            class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+                            Offer a complete range of certification and compliance. <a href="#"
+                                class="font-semibold text-indigo-400"><span aria-hidden="true"
+                                    class="absolute inset-0"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Leading
+                            Compliance & Certification Consultants</h1>
+                        <p class="mt-8 text-lg text-sm text-pretty text-gray-400 text-lg">SS Global Services is a
+                            trusted
+                            name with over 12+ years of experience in BIS Certification, EPR Registration, WPC ETA
+                            Approval,
+                            BEE Registration, and TEC/MTCTE Compliance. We provide fast, reliable, complete
+                            certification
+                            solutions to both Indian and foreign manufacturers and importers, ensuring cost-effective
+                            and
+                            easy regulatory approvals.</p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="#"
+                                class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Get
+                                started</a>
+                            <a href="#" class="text-sm/6 font-semibold text-white">Learn more <span
+                                    aria-hidden="true">→</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div aria-hidden="true"
-                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-                <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-                    class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75">
+                <div aria-hidden="true"
+                    class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                        class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75">
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,18 +147,19 @@
         <div class="px-6 lg:px-8">
             <div class="mx-auto max-w-4xl text-center">
 
-                <h2 class="text-base font-semibold text-indigo-400">
+                <h2 class=" font-semibold text-indigo-400 mb-5 text-2xl">
                     ABOUT US
                 </h2>
 
                 <!-- Heading with proper wrapping -->
-                <p class="mt-2 text-4xl font-semibold tracking-tight text-[#004e79]
-               sm:text-5xl uppercase text-balance">
+                <p class="mt-2 font-semibold tracking-tight text-[#004e79]
+               sm:text-5xl uppercase text-balance md:text-5xl
+           lg:text-5xl ">
                     Leading Compliance & Certification Consultants in India
                 </p>
 
                 <!-- First paragraph center -->
-                <p class="mt-7 text-lg text-gray-700">
+                <p class="mt-7 text-lg text-gray-700 font-serif">
                     SS Global Services is a trusted name with over 12+ years of experience
                     in BIS Certification, EPR Registration, WPC ETA Approval, BEE Registration,
                     and TEC/MTCTE Compliance. We provide fast, reliable, complete certification
@@ -158,7 +168,7 @@
                 </p>
 
                 <!-- Second paragraph center -->
-                <p class="mt-4 text-lg text-gray-700">
+                <p class="mt-4 text-lg text-gray-700 font-serif">
                     With a deep understanding of Indian regulatory standards, we help
                     businesses achieve full compliance with government requirements.
                     This reduces delays, helps avoid penalties, and speeds up market access.
@@ -171,7 +181,7 @@
     <!-- what we do  -->
 
     <div class="whatwedo text-center">
-        <h2 class="text-6xl font-bold text-[#004e79] mb-8 uppercase font-serif">What we do</h2>
+        <h2 class="text-5xl font-bold text-[#004e79] mb-8 uppercase font-serif">What we do</h2>
         <img src="https://www.ssglobalservices.in/images/what%20ss%20global%20do.png">
     </div>
 
@@ -200,8 +210,9 @@
                     BIS (CRS) Registration for Electronic Product
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
-                    Ensure compliance under the BIS Scheme-X Certification. Get expert guidance for product safety approvals..
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
+                    Ensure compliance under the BIS Scheme-X Certification. Get expert guidance for product safety
+                    approvals..
                 </h5>
 
                 <a href="#"
@@ -224,8 +235,9 @@
 
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
-                     Get EPR Registration for E-Waste in India. Fulfill CPCB norms & stay compliant with waste regulations.
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
+                    Get EPR Registration for E-Waste in India. Fulfill CPCB norms & stay compliant with waste
+                    regulations.
 
                 </h5>
 
@@ -248,7 +260,7 @@
                     EPR Registration for Plastic Waste
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
                     Apply for Plastic Waste EPR Registration easily. Meet SPCB/CPCB norms and plastic recycling rules.
                 </h5>
 
@@ -268,13 +280,14 @@
 
             <div class="p-6 text-center">
                 <span class="font-bold text-2xl">
-                   EPR Registration for Battery Waste
+                    EPR Registration for Battery Waste
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
-                   
-                          Comply with Battery Waste Management Rules. Get EPR Registration for lithium, lead, and used batteries.
-                       
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
+
+                    Comply with Battery Waste Management Rules. Get EPR Registration for lithium, lead, and used
+                    batteries.
+
 
                 </h5>
 
@@ -295,11 +308,11 @@
 
             <div class="p-6 text-center">
                 <span class="font-bold text-2xl">
-                   EPR Registration for Tyre Waste
+                    EPR Registration for Tyre Waste
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
-                      Effortless EPR for End-of-Life Tyres. Ensure MoEFCC compliance and receive CPCB authorization.
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
+                    Effortless EPR for End-of-Life Tyres. Ensure MoEFCC compliance and receive CPCB authorization.
                 </h5>
 
                 <a href="#"
@@ -321,7 +334,7 @@
                     WPC-ETA Approval
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
                     Get WPC ETA Approval for wireless devices. Import legally and quickly meet India’s RF device norms.
                 </h5>
 
@@ -340,12 +353,12 @@
 
             <div class="p-6 text-center">
                 <span class="font-bold text-2xl">
-                   TEC/MTCTE Approval
+                    TEC/MTCTE Approval
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
-                      Obtain TEC/MTCTE Approval for telecom products. Fast testing and certification under DoT norms.
-                       
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
+                    Obtain TEC/MTCTE Approval for telecom products. Fast testing and certification under DoT norms.
+
 
                 </h5>
 
@@ -368,8 +381,9 @@
                     TAC & IMEI Registration
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
-                    Get TAC & IMEI Registration with our support. Ensure mobile device compliance with Indian telecom law..
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
+                    Get TAC & IMEI Registration with our support. Ensure mobile device compliance with Indian telecom
+                    law..
                 </h5>
 
                 <a href="#"
@@ -391,7 +405,7 @@
                     BEE Registration
                 </span>
 
-                <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">
+                <h5 class="mt-3 mb-6 text-xl font-semibold tracking-tight text-heading">
                     Get BEE Registration for appliances with expert support. Ensure energy label compliance in India.
                 </h5>
 
@@ -401,34 +415,39 @@
                 </a>
             </div>
         </div>
+    </div>
+
+
+    <!-- RANKINIG  -->
+
+    <div class="rankingsys text-center my-19 mb-5">
+        <<h1 class="font-bold text-5xl text-[#004e79] mb-2 font-serif uppercase ">
+  Trusted by creators
+  <span class="block mb-8">worldwide</span>
+</h1>
+
+
+        <div class="bg-gray-900 py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-400">Transactions every 24 hours</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">44 million
+                        </dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-400">Assets under holding</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">$119
+                            trillion</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-400">New users annually</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">46,000</dd>
+                    </div>
+                </dl>
+            </div>
         </div>
-
-
-        <!-- RANKINIG  -->
-
-        <div class="rankingsys text-center my-19 mb-5">
-            <h1 class="font-bold text-6xl text-[#004e79] mb-2 font-serif uppercase">Trusted by creators worldwide</h1>
-            <small class="text-1xl font-bold h-4">With 12+ years of proven expertise, our clients count on us for smooth compliance support and dedicated service at every step..</small>
-        
-<div class="bg-gray-900 py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dt class="text-base/7 text-gray-400">Transactions every 24 hours</dt>
-        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">44 million</dd>
-      </div>
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dt class="text-base/7 text-gray-400">Assets under holding</dt>
-        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">$119 trillion</dd>
-      </div>
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dt class="text-base/7 text-gray-400">New users annually</dt>
-        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">46,000</dd>
-      </div>
-    </dl>
-  </div>
-</div>
-</div>
+    </div>
 
 
 
